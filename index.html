@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Tarea semana 5</title>
+     <link rel="stylesheet" href="miestilo.css"/>
+
+  </head>
+  <body class="fondo_principal">
+    <div>
+      <h1>Encuesta de uso de clientes METRO</h1><!--
+        Titulos del formulario-->
+
+      <img src="logoMetro.png" id="logo" width="120px" height="100px">
+    </div>
+
+    <form class="fondo_secundario" action="/procesa_datos.php" method="post" >
+
+      <fieldset class="borde">
+        <fieldset class="borde2">
+          <legend class="Leyenda">Datos Personales</legend><!-- aqui
+            creamos el primer bloque para los datos personales-->
+          <div>
+              <input type="hidden" name="_fecha" value="2020-07-04"/>
+              <input type="hidden" name="_hora" value="16:35:00"/>
+
+              <label for="_rut">Rut</label>
+              <input type="text" name="_rut" id="_rut"
+              title="Debe usar el formato 11.111.111-1"
+              placeholder="11.111.111-1"
+              pattern="[0-9]{2}.[0-9]{3}.[0-9]{3}-[0-9kK]" required autofocus tabindex="1"
+              accesskey="R"/>
+              <label for="_edad">Edad</label>
+              <input type="number" name="_edad" value="" max = 120 min = 10 id ="_edad"
+              required tabindex="2" placeholder="55" title="Ingrese su edad">
+          </div>
+
+          <div>
+              <label>Género:</label>
+
+              <input type="radio" id="radioHombre" value="Hombre" name="_genero" checked tabindex="3">
+              <label for="radioHombre">Hombre</label>
+              <input type="radio" id="radioMujer" value="Mujer" name="_genero" >
+              <label for="radioMujer">Mujer</label>
+          </div>
+        </fieldset>
+      <fieldset class="borde2">
+        <legend class="Leyenda">Uso de servicio</legend>
+        <div>
+         <fieldset class="borde3">
+
+              <label class="etiqueta">Frecuencia de uso: </label>
+              <input type="radio" name="_frecuencia" value="Nunca" checked>
+              <label for="">Nunca</label>
+              <input type="radio" name="_frecuencia" value="Poca">
+              <label for="">Poca</label>
+              <input type="radio" name="_frecuencia" value="Regular">
+              <label for="">Regular</label>
+              <input type="radio" name="_frecuencia" value="Siempre">
+              <label for="">Siempre</label>
+         </fieldset>
+        </div>
+        <div class="">
+          <fieldset class="borde3">
+
+              <label class="etiqueta">Horario de uso: </label>
+              <input type="radio" name="_uso" value="Punta" checked>
+              <label for="">Horario Punta</label>
+              <input type="radio" name="_uso" value="Medio">
+              <label for="">Horario Medio</label>
+              <input type="radio" name="_uso" value="Valle">
+              <label for="">Horario Valle</label>
+          </fieldset>
+
+        </div>
+        <div>
+          <fieldset class="borde3">
+            <!-- aqui creamos el grupo de checkbox que almacenaran
+            el valor de las lineas que usa el encuestado-->
+            <label class="etiqueta">Líneas de uso:</label>
+            <input type="checkbox" name="_linea1" value="si" checked><!-- chequeado por defecto-->
+            <label for="">L1 </label>
+            <input type="checkbox" name="_linea2" value="si">
+            <label for="">L2</label>
+            <input type="checkbox" name="_linea3" value="si">
+            <label for="">L3</label>
+            <input type="checkbox" name="_linea4" value="si">
+            <label for="">L4</label>
+            <input type="checkbox" name="_linea5" value="si">
+            <label for="">L5</label>
+            <input type="checkbox" name="_linea6" value="si">
+            <label for="">L6</label>
+          </fieldset>
+        </div>
+        </fieldset>
+
+        <div>
+          <fieldset class="borde2">
+            <!--Aqui se crea el bloque que almacenara la evaluacion
+          del servicio y las observaciones -->
+            <legend class="Leyenda">Evaluación del servicio</legend>
+            <fieldset class="borde3">
+
+                <label class="etiqueta">Calidad:</label>
+                <input type="radio" name="_calidad" value="Malo">
+                <label for="">Malo</label>
+                <input type="radio" name="_calidad" value="Deficiente">
+                <label for="">Deficiente</label>
+                <input type="radio" name="_calidad" value="Regular" checked>
+                <label for="">Regular</label>
+                <input type="radio" name="_calidad" value="Bueno">
+                <label for="">Bueno</label>
+                <input type="radio" name="_calidad" value="Excelente">
+                <label for="">Excelente</label>
+            </fieldset>
+            <fieldset class="borde3">
+              <!--Aqui se agrega el campo de texto para las observaciones, con
+            un tamaño especifico adaptao al tamaño del formulario -->
+                <div class="">
+                  <label for="_obs" class="etiqueta">Observaciones</label>
+                </div>
+                <textarea name="_observaciones" id="_obs" maxlength="200"rows="10" cols="45"
+                placeholder="Agregue aquí sus Observaciones máximo 200 caracteres" title="Ingrese sus comentarios" accesskey="O"></textarea>
+            </fieldset>
+          </fieldset>
+        </div>
+        </fieldset>
+        <!--Finalmente se agrega el boton de submit que deberia activar el envio
+      de los datos , en nuestro caso con el metodo POST ya que va informacion
+      personal del usuario , tambien antes de ser enviados se validan los formatos
+      y valores de los input rut y edad, si estan errados pide reingresarlos-->
+        <div>
+        <input type="submit" class="boton" name="" value="Enviar Encuesta" accesskey="K" title="alt + k">
+        </div>
+
+    </form>
+    <div >
+      <footer>
+          <h3>Implementado por MERANA fono: 345654344</h3>
+      </footer>
+
+    </div>
+
+  </body>
+</html>

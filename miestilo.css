@@ -1,0 +1,97 @@
+h1 {
+color:blue;
+text-align:center;
+}
+
+h3{
+
+  color:blue;
+  float:right;
+}
+
+h4{
+  color:green;
+}
+
+#logo{
+
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.fondo_principal{
+  background-color:lightgreen;
+}
+
+
+@media screen and (min-width: 780px) {
+
+
+
+  .fondo_secundario{
+      width:637px;height:525px;
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #587FFF;
+      border: solid 2px;
+  }
+
+  #_obs{ width:540px;}
+}
+
+
+@media screen and (min-width: 480px) and (max-width: 780px) {
+
+h4{text-align:center;}
+
+  .fondo_secundario{
+      width:480px;height:600px;
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: #587FFF;
+      border: solid 2px;
+  }
+  .borde{
+    width:450px;
+    height:580px;}
+
+  .borde2{
+    width:410px;
+
+  }
+  .borde3{width:380px;}
+}
+
+
+
+
+
+
+#_obs:hover{
+
+border-color:red;
+}
+
+.Leyenda {
+    color:white;
+    font-weight: bold;
+
+}
+.etiqueta {
+    font-weight: bold;
+}
+
+.boton {
+
+  margin-top: 10px;
+}
+
+#_resultados{
+
+  background-color: initial;
+  width:300px;
+  height:initial;
+}
